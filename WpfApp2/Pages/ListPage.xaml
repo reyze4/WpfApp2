@@ -1,0 +1,47 @@
+﻿<Page x:Class="WpfApp2Tests.Pages.ListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2Tests.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListPage"
+      Loaded="Page_Loaded">
+
+    <Grid x:Name="grid">
+        <DockPanel>
+            <StackPanel Margin="10" DockPanel.Dock="Top"
+                        Orientation="Horizontal">
+                <Button x:Name="BAdd"
+                        Content="Добавить"
+                        Margin="10 0 5 0"
+                        Click="BAdd_Click"
+                        Background="#FFB2DB8A"
+                        Width="100"/>
+                <Button x:Name="BEdit"
+                        Content="Изменить"
+                        Margin="5 0"
+                        Click="BEdit_Click"
+                        Background="#FF8ADBD6"
+                        Width="100"/>
+                <Button x:Name="BRemove"
+                        Content="Удалить"
+                        Click="BRemove_Click"
+                        Margin="5 0"
+                        Background="#FFDB8A8A"
+                        Width="100"/>
+            </StackPanel>
+            <ListView x:Name="LVProduct" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=ID}"   Width="100">Id</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Title}" Width="300">Название</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Width="200">Описание</GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Path=Cost}" Width="200">Цена</GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </DockPanel>
+    </Grid>
+</Page>

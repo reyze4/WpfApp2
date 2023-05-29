@@ -1,0 +1,53 @@
+﻿<Page x:Class="WpfApp2Tests.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2Tests.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthPage">
+
+    <Grid Background="#FF8A5858">
+       
+            <StackPanel 
+                        Width="250" Margin="275,142,275,0">
+                <TextBlock Text="Авторизация"
+                           HorizontalAlignment="Center"
+                           FontSize="20"
+                           FontWeight="SemiBold"/>
+                <StackPanel>
+                    <TextBlock Text="Логин"
+                               Opacity="0.4"/>
+                    <TextBox x:Name="TBLogin"
+                            
+                             MaxLength="20" TextChanged="TBLogin_TextChanged"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Пароль"
+                               Opacity="0.4"/>
+                    <PasswordBox x:Name="TBPassword"
+                                 MaxLength="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+                    <Button x:Name="BLogin"
+                            Content="Войти"
+                            Background="#FF004AFF" 
+                            Click="BLogin_Click"
+                            Width="80"
+                            Height="30"
+                            Margin="0 5"/>
+                    <Button x:Name="BReg"
+                            Content="Регистрация"
+                            Background="#FF0027FF" 
+                            Click="BReg_Click"
+                            Width="120"
+                            Height="30"
+                            Margin="5 0"/>
+                </StackPanel>
+            </StackPanel>
+        
+    </Grid>
+</Page>
